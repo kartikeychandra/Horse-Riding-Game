@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.gameover{
+    position: absolute;
+    top: 12vw;
+    left: 33vw;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100px;
+    color: red;
+    visibility: hidden;
+}
+.scorecont{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-family: 'Permanent Marker', cursive;
+}
+#sc{
+    position: absolute;
+    top: 22vw;
+    left: 40vw;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    color: red;
+    stroke: blue;
+    stroke-width: 2px;
+    visibility: hidden;
+}
+body{
+    overflow: hidden;
+}
+.bg{
+    background-image: url(stadium.jpg);
+    position: relative;
+    background-repeat: repeat-x;
+    background-size: 100vw 106vh;
+    width: 200vw;
+    height: 100vh;
+    overflow: hidden;
+    animation: bgmoving 6s linear infinite;
+    
+}
+.bg img{
+    background-repeat: repeat-x;
+}
+.horse{
+    position: absolute;
+    height: 100px;
+    width: 382px;
+    left: 100px;
+    bottom: 235px;
+    z-index: 100;
+}
+.horse img{
+    width: 311px;
+}
+.obstacle{
+    position: absolute;
+    bottom: 250px;
+    left: 44vw;
+    animation: aniobs linear 6s infinite;
+}
+
+.obstacle img{
+    position: absolute;
+    width: 239px;
+    /* animation: aniobs linear 6s infinite; */
+}
+#hidhorse{
+    position: absolute;
+    width: 311px;
+    visibility: hidden;
+    left: 0px;
+}
+.animateHorse{
+    animation: anihorse linear 1s;
+}
+#horsehalt{
+    position: absolute;
+    width: 411px;
+    visibility: hidden;
+    left: 0px;
+}
+.animateHorse2{
+    animation: anihorse2 linear;
+    animation-duration: 2s;
+}
+@keyframes anihorse2{
+    0%{
+        bottom: -100px;
+    }
+    100%{
+        bottom: -1235px;
+    }
+}
+@keyframes bgmoving{
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes aniobs{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+@keyframes anihorse{
+    0%{
+        bottom: 235px;   
+    }
+    50%{
+        bottom: 550px;
+    }
+    100%{
+        bottom: 235px;
+        
+    }
+}
